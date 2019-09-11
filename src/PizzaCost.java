@@ -18,6 +18,7 @@ public class PizzaCost {
         System.out.format("Total cost of your pizza is $%.2f\n", totalcost);
         System.out.println("I am full now!");
         System.out.println("This was done from home");
+        System.out.println("Day 2");
     }
     
 }
