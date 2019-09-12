@@ -17,8 +17,7 @@ public class PizzaCost {
         totalcost = LABOUR + HEAT + (toppings * PERTOP) + (size * PERINCH);
         System.out.format("Total cost of your pizza is $%.2f\n", totalcost);
         System.out.println("I am full now!");
-        System.out.println("This was done at school");
-        System.out.println("This was done at Home again");
+        
         
     }
     
