@@ -141,28 +141,35 @@ public class PizzaCostJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void numoftoppingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numoftoppingsActionPerformed
-        try{
-        toppings = Double.parseDouble(numoftoppings.getText());
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Error - numbers only!");
-            return;
-        }
-        toppingstotal = PERTOP * toppings;
+        
     }//GEN-LAST:event_numoftoppingsActionPerformed
 
     private void pizzasizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzasizeActionPerformed
+       
+    }//GEN-LAST:event_pizzasizeActionPerformed
+
+    private void hungrybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hungrybtnActionPerformed
         try{
         size = Double.parseDouble(pizzasize.getText());
         } catch(Exception e){
             JOptionPane.showMessageDialog(this, "Error - numbers only!");
+            pizzasize.setText("");
+            numoftoppings.setText("");
             return;
         }
         sizetotal = PERINCH * size;
-    }//GEN-LAST:event_pizzasizeActionPerformed
-
-    private void hungrybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hungrybtnActionPerformed
+        try{
+        toppings = Double.parseDouble(numoftoppings.getText());
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error - numbers only!");
+            pizzasize.setText("");
+            numoftoppings.setText("");
+            return;
+        }
+        toppingstotal = PERTOP * toppings;
         totalcost = LABOUR + HEAT + sizetotal + toppingstotal;
-        pizzaprice.setText("Your cost for your pizza is $"+ totalcost);
+        pizzaprice.setText("The cost for your pizza is $"+ totalcost);
+        
     }//GEN-LAST:event_hungrybtnActionPerformed
 
     private void pizzapriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzapriceActionPerformed
